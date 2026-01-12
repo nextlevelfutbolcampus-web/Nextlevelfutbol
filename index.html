@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido Camisetas · Next Level Fútbol Campus</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body{
+    font-family:'Montserrat',sans-serif;
+    background:linear-gradient(180deg,#eef2f7,#ffffff);
+    margin:0;
+    padding:20px;
+    color:#222;
+}
+header{
+    text-align:center;
+    margin-bottom:35px;
+}
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+.badge{
+    display:inline-block;
+    background:#ff4d4f;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:14px;
+    margin-top:12px;
+}
+.notice{
+    margin-top:15px;
+    background:#fff3cd;
+    padding:14px;
+    border-radius:10px;
+    font-weight:600;
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+    max-width:1300px;
+    margin:auto;
+}
+.card{
+    background:#fff;
+    border-radius:16px;
+    padding:18px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+.card img{
+    width:100%;
+    border-radius:14px;
+}
+.price{
+    font-size:20px;
+    font-weight:700;
+    margin:10px 0;
+}
+input,select,textarea,button{
+    margin-top:8px;
+    padding:11px;
+    width:100%;
+    font-size:15px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+textarea{resize:none}
+button{
+    background:#25D366;
+    border:none;
+    color:#fff;
+    font-weight:700;
+    cursor:pointer;
+}
+button:hover{background:#1db954}
+footer{
+    margin-top:50px;
+    text-align:center;
+    font-size:13px;
+    color:#666;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">NEXT LEVEL FÚTBOL CAMPUS</div>
+<div class="badge">Pedido obligatorio</div>
+<div class="notice">
+La camiseta oficial es obligatoria para participar en el campus.<br>
+<strong>Fecha límite de pedido: 15 de junio</strong>
+</div>
+</header>
+
+<div class="grid">
+
+<div class="card">
+<img src="alevin.jpg">
+<h3>Alevín (10–11 años)</h3>
+<div class="price">20 €</div>
+<input id="n-a" placeholder="Nombre jugador">
+<input id="d-a" placeholder="Dorsal">
+<select id="t-a"><option>10</option><option>12</option><option>XS</option></select>
+<textarea id="o-a" placeholder="Observaciones (opcional)"></textarea>
+<button onclick="pedir('Alevín','n-a','d-a','t-a','o-a','20€')">Pedir por WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="benjamin.jpg">
+<h3>Benjamín (8–9 años)</h3>
+<div class="price">18 €</div>
+<input id="n-b" placeholder="Nombre jugador">
+<input id="d-b" placeholder="Dorsal">
+<select id="t-b"><option>8</option><option>10</option></select>
+<textarea id="o-b" placeholder="Observaciones (opcional)"></textarea>
+<button onclick="pedir('Benjamín','n-b','d-b','t-b','o-b','18€')">Pedir por WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="prebenjamin.jpg">
+<h3>Prebenjamín (5–7 años)</h3>
+<div class="price">18 €</div>
+<input id="n-p" placeholder="Nombre jugador">
+<input id="d-p" placeholder="Dorsal">
+<select id="t-p"><option>6</option><option>8</option></select>
+<textarea id="o-p" placeholder="Observaciones (opcional)"></textarea>
+<button onclick="pedir('Prebenjamín','n-p','d-p','t-p','o-p','18€')">Pedir por WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="infantil.jpg">
+<h3>Infantil (12–13 años)</h3>
+<div class="price">22 €</div>
+<input id="n-i" placeholder="Nombre jugador">
+<input id="d-i" placeholder="Dorsal">
+<select id="t-i"><option>XS</option><option>S</option><option>M</option></select>
+<textarea id="o-i" placeholder="Observaciones (opcional)"></textarea>
+<button onclick="pedir('Infantil','n-i','d-i','t-i','o-i','22€')">Pedir por WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="cadete.jpg">
+<h3>Cadete (14–15 años)</h3>
+<div class="price">22 €</div>
+<input id="n-c" placeholder="Nombre jugador">
+<input id="d-c" placeholder="Dorsal">
+<select id="t-c"><option>S</option><option>M</option><option>L</option></select>
+<textarea id="o-c" placeholder="Observaciones (opcional)"></textarea>
+<button onclick="pedir('Cadete','n-c','d-c','t-c','o-c','22€')">Pedir por WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="juvenil.jpg">
+<h3>Juvenil (16 años)</h3>
+<div class="price">25 €</div>
+<input id="n-j" placeholder="Nombre jugador">
+<input id="d-j" placeholder="Dorsal">
+<select id="t-j"><option>M</option><option>L</option><option>XL</option></select>
+<textarea id="o-j" placeholder="Observaciones (opcional)"></textarea>
+<button onclick="pedir('Juvenil','n-j','d-j','t-j','o-j','25€')">Pedir por WhatsApp</button>
+</div>
+
+</div>
+
+<footer>
+© Next Level Fútbol Campus · Pedido de camisetas oficiales<br>
+Contacto: 640 728 027
+</footer>
+
+<script>
+function pedir(cat,nId,dId,tId,oId,precio){
+    const n=document.getElementById(nId).value||"No indicado";
+    const d=document.getElementById(dId).value||"No indicado";
+    const t=document.getElementById(tId).value;
+    const o=document.getElementById(oId).value||"Ninguna";
+
+    const msg=encodeURIComponent(
+        "PEDIDO CAMISETA NEXT LEVEL FUTBOL CAMPUS"
+        +"\nCategoría: "+cat
+        +"\nNombre: "+n
+        +"\nDorsal: "+d
+        +"\nTalla: "+t
+        +"\nObservaciones: "+o
+        +"\nPrecio: "+precio
+    );
+    window.open("https://wa.me/34640728027?text="+msg,"_blank");
+}
+</script>
+
+</body>
+</html>
